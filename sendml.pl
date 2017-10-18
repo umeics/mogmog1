@@ -13,7 +13,7 @@ Encode::from_to($honbun, 'utf8', 'iso-2022-jp');
 Encode::from_to($subject, 'utf8', 'iso-2022-jp');
 encode('MIME-Header-ISO_2022_JP', $subject);
 
-my $smtp = Email::Sender::Transport::SMTP::TLS->new(host => $host, port => 587, username => $user, password => $passwd ,Timeout => 60, Debug => 1) or die;
+my $smtp = Email::Sender::Transport::SMTP::TLS->new(host => $host, port => 587, username => $user, password => $passwd ,Timeout => 60) or die;
 
 my $email = Email::Simple->create(
   header => [
